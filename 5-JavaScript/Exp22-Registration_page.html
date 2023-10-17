@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>Registration form</title>
+        <link rel="icon" href="Images/SRIT-Logo.png "/>
+        <style>
+            body{
+                background-color: aliceblue;
+            }
+            @media screen and (max-width=100px){
+                img{
+                height: 100px;
+                width: 20%;
+            }
+            }
+        </style>
+        <script>
+            function validation(form){
+               var u=form.username.value;
+               var p=form.password.value;
+               var e1=form.email1.value;
+               var e2=form.email2.value;
+               var num=form.Phonenumber.value;
+               var d=form.date.value;
+               var a=form.age.value;
+               var dis=form.District.value;
+               var add=form.address.value;
+               var gen=form.gender.value;
+               var htmlCourse = form.htmlCourse.checked;
+                var cssCourse = form.cssCourse.checked;
+                var jsCourse = form.jsCourse.checked;
+
+               if(u.length===0){
+                alert("Enter valid username");
+                return false;
+               }
+               if(p.length===0){
+                alert("Enter valid password");
+                return false;
+               }
+               if(e1.length===0){
+                alert("Enter valid Email Id");
+                return false;
+               }
+               if(e2.length===0){
+                alert("Select valid Email Id");
+                return false;
+               }
+               if(num.length===0){
+                alert("Enter valid mobile number");
+                return false;
+               }
+               if(d.length===0){
+                alert("Select valid Date of Birth");
+                return false;
+               }
+               if(a.length===0){
+                alert("Enter valid age");
+                return false;
+               }
+               if(dis==="Select an option"){
+                alert("Select district");
+                return false;
+               }
+               if(add.length===0){
+                alert("Enter valid address");
+                return false;
+               }
+               if(gen.length===0){
+                alert("Select your gender");
+                return false;
+               }
+               if (!htmlCourse && !cssCourse && !jsCourse) {
+                alert("Select at least one course");
+                return false;
+}
+               
+               
+                
+                
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <center><h1>REGISTRATION FORM</h1></center>
+        <center><img src="Images/SRIT-Logo.png " alt="img not found"/></a></center><br/><br/>
+        <form action="Log_in_page.html" onsubmit="return validation(this)">
+            Username: <input type="text" name="username"/><br/><br/>
+            Password:<input type="password" name="password"/><br/><br/>
+            Email:<input type="email" name="email1"/><br/><br/>
+            Personal mail id:<input type="email" name="email2" id="myemails" list="mymails"/><br/><br/>
+            Phone Number: <input type="tel" name="Phonenumber" pattern="[0-9]{10}"/><br/><br/>
+            <datalist id="mymails">
+                <option value="a@gmail.com"></option>
+                <option value="b@gmail.com"></option>
+            </datalist><br/>
+            Date of Birth:<input type="date" name="date"/><br/><br/>
+            Age:<input type="number" name="age"/><br/><br/>
+            District: 
+            <select name="District">
+                <option  value="Select an option" selected disabled>select an option</option>
+                <option value="Anantapur">Anantapur</option>
+                <option value="Chittor">Chittor</option>
+                <option value="Kurnool">Kurnool</option>
+            </select><br/><br/>
+            Address:<br/>
+            <textarea cols="30" rows="4" name="address" placeholder="Type your address..."></textarea><br/><br/>
+            Gender:<br/><br/>
+            <input type="radio" name="gender" value="male"/>Male<br/>
+            <input type="radio" name="gender" value="female"/>Female<br/>
+            <input type="radio" name="gender" value="prefer not to say"/>prefer not  to say<br/><br/>
+            
+            Courses:<br/><br/>
+            <input type="checkbox" name="htmlCourse" value="HTML"/>HTML<br/>
+            <input type="checkbox" name="cssCourse" value="CSS"/>CSS<br/>
+            <input type="checkbox" name="jsCourse" value="JS"/>JS<br/><br/>
+        <input type="submit" name="submit"/>
+        </form>
+    </body>

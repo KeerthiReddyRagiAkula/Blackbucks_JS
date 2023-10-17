@@ -1,0 +1,54 @@
+> 5+5
+10
+> 5/5
+1
+> 10%2
+0
+> 5-4
+1
+> var a="Keerthi"
+undefined
+> a
+'Keerthi'
+> var str="ravi"
+undefined
+> var str1="Kumar"
+undefined
+> str+str1
+'raviKumar'
+NATURAL NUMBERS
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+var n=1;
+while(n<=5){
+console.log(n);
+n++;
+}
+//ctrl+d for exit
+1
+2
+3
+4
+5
+5 //mirror img
+FUNCTIONS
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+function myfun(name){
+console.log(name);;
+}
+myfun("Raj");
+
+Raj
+undefined
+
+ARROW FUNCTION
+> .editor
+// Entering editor mode (Ctrl+D to finish, Ctrl+C to cancel)
+myfunction=(name)=>{
+console.log(name);
+}
+myfunction("Ram");
+
+Ram
+undefined

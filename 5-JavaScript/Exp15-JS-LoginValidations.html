@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myValidation(form){
+            var uname=form.username.value;
+            var password=form.password.value;
+            if(uname.length===0){
+                alert("Enter valid username");
+                return false;
+            }
+            if(password.length===0){
+                alert("Enter valid password");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form action="Login Success" onsubmit="return myValidation(this)">
+        User name<input type="text" name="username"/>
+        Password<input type="password" name="password"/>
+        <input type="submit" value="submit"/>
+        <input type="reset" value="reset"/>
+    </form>
+</body>
+</html>

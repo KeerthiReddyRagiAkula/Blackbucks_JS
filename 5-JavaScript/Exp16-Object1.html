@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header1" ">Hello</h1>
+    <button type="button" onclick="submit()">Click</button>
+    <script>
+        var person={firstName: "Keerthi",lastname: "kee", age:"143443", address:"atp"};
+        function submit(){
+        document.getElementById("header1").innerHTML=person.firstName +"<br/>"+ person.lastname +"<br/>"+person.age +"<br/>"+person.address;
+        }
+    </script>
+</body>
+</html>

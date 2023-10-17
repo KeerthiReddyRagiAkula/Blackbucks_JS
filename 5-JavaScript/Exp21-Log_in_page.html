@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="icon" href="Images/SRIT-Logo.png "/>
+    <style>
+        form{
+        
+            text-align: center;
+            margin: 0px 30% 0px 30%;
+            padding:20px 0% 20px 0%;
+            background: whitesmoke;
+            margin-top: 200px;
+        }
+        
+        .formele{
+            font-size: 35%;
+        }
+        
+        input{
+            
+            width:35%;
+        }
+        h1{
+            text-align: center;
+        }
+        
+    </style>
+    <script>
+        function validation(form){
+        var username=form.Username.value;
+        var password=form.password.value;
+        if(username.length===0){
+            alert("Enter valid username");
+            return false;
+        }
+        if(password.length===0){
+            alert("Enter valid password");
+            return false;
+        }
+        return true;
+    }
+    </script>
+</head>
+<body>
+    <h1>Login Page</h1>
+    
+    <form action="#" onsubmit="return validation(this)">
+        <div class="form_ele">User name: <input type="username" name="Username" placeholder="Keerthi" title="Type your name"/><br/><br/></div>
+        <div class="form_ele">Password:  <input type="password" name="password" placeholder="password" title="Type password"/><br/><br/></div>
+        <button name="sumbit" type="submit">Sign in</button>
+    </form>
+    
+    
+</body>
+</html>

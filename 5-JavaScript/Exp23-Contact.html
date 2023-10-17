@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Contact</title>
+        <link rel="icon" href="Images/SRIT-Logo.png "/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                padding-top: 50px;
+                background: linear-gradient(rgba(0,128,0,0.5),rgb(135, 206, 235,0.5),rgba(128,0,128,0.5));
+                font-weight:bold;
+            }
+            form{
+                margin:0px 30% 0px 30%; 
+                padding: 30px 0% 10px 3%;
+                box-shadow: 20px 20px 20px black;
+            }
+            h1{
+                text-shadow: 10px 20px 10px black;
+            }
+            
+        </style>
+        <script>
+            function validation(form){
+                var un=form.username.value;
+                var num=form.Phonenumber.value;
+                var email=form.email.value;
+                var country=form.Country.value;
+                var add=form.add.value;
+                if(un.length===0){
+                    alert("Enter valid username");
+                    return false;
+                }
+                if(num.length===0){
+                    alert("Enter valid number");
+                    return false;
+                }
+                if(email.length===0){
+                    alert("Enter mail id");
+                    return false;
+                }
+                if(country==="Select a option"){
+                    alert("Select your country");
+                    return false;
+                }
+                if(add.length===0){
+                    alert("Enter address");
+                    return false;
+                }
+                return true;
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <center><h1><b>Contact Us<b></h1></center>
+        <form action="#" onsubmit="return validation(this)">
+            FULL NAME: <input type="username" name="username" autofocus/><br/><br/>
+            PHONE NUMBER: <input type="tel" name="Phonenumber" pattern="[0-9]{10}"/><br/><br/>
+            EMAIL:&nbsp;<input type="email" name="email"/><br/><br/>
+            COUNTRY: 
+            <select name="Country">
+                <option value="Select a option" >Select a option</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+            </select><br/><br/>
+            ADDRESS:<br/>
+            <textarea  rows="4" placeholder="Type your address..." name="add"></textarea><br/><br/>
+            <input type="submit" class="btn btn-primary"/>
+        </form>
+    
+    </body>

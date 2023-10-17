@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function person(fn,ln,age){
+            this.fn=fn;
+            this.ln=ln;
+            this.age=age;
+            this.fullname=function(){
+                return this.fn + " " +this.ln;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <script>
+        const person1=new person("Raj","Kumar",30);
+        const person2=new person("Ravi","Babu",34);
+        console.log(person1.fn +"," + person1.ln +","+person1.age);
+        console.log(person2.fullname()+","+person2.age);
+
+    </script>
+    
+</body>
+</html>
